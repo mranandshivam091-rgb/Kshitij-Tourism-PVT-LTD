@@ -3,87 +3,200 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kshitij Tourism Pvt. Ltd.</title>
-<style>
-  :root{
-    --primary:#0b6e4f;
-    --accent:#f2a900;
-    --dark:#13322b;
-    --light:#f7f7f2;
-  }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:'Segoe UI',Arial,sans-serif;color:#222;background:var(--light);line-height:1.6;}
-  header{background:var(--dark);color:#fff;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}
-  header h1{font-size:1.4rem;}
-  nav a{color:#fff;text-decoration:none;margin-left:1.5rem;font-weight:600;}
-  nav a:hover{color:var(--accent);}
-  .hero{background:linear-gradient(135deg,var(--primary),var(--dark));color:#fff;text-align:center;padding:5rem 1.5rem;}
-  .hero h2{font-size:2.2rem;margin-bottom:.5rem;}
-  .hero p{font-size:1.1rem;max-width:600px;margin:0 auto 1.5rem;}
-  .btn{background:var(--accent);color:#222;padding:.8rem 1.6rem;border-radius:4px;text-decoration:none;font-weight:700;display:inline-block;}
-  section{padding:3rem 1.5rem;max-width:1000px;margin:0 auto;}
-  section h3{color:var(--primary);font-size:1.6rem;margin-bottom:1rem;border-bottom:3px solid var(--accent);display:inline-block;padding-bottom:.3rem;}
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;margin-top:1.5rem;}
-  .card{background:#fff;border-radius:8px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.08);}
-  .card h4{color:var(--dark);margin-bottom:.5rem;}
-  footer{background:var(--dark);color:#ddd;text-align:center;padding:1.5rem;font-size:.9rem;}
-  footer a{color:var(--accent);}
-</style>
+<title>Kshitij Tourism Private Limited | Your Travel Partner for a Better Tomorrow</title>
+<meta name="description" content="Kshitij Tourism Private Limited — flight booking, visa assistance, passport assistance, hotel booking and tour packages, domestic and international.">
+<link rel="icon" href="assets/logo.jpg">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h1>Kshitij Tourism Pvt. Ltd.</h1>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Packages</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<div class="hero">
-  <h2>Explore Horizons with Kshitij Tourism</h2>
-  <p>Your trusted travel partner for unforgettable tours, pilgrimages, and holiday packages across India and beyond.</p>
-  <a class="btn" href="#contact">Plan Your Trip</a>
+<div class="topbar">
+  <div class="topbar-inner">
+    <span>📍 A46 UGF, Priyadarshani Vihar, New Delhi 110092</span>
+    <span>📞 <a href="tel:+919711853825">+91 9711853825</a></span>
+    <span class="cin">🪪 CIN No.: U63000DL2013PTC259537</span>
+  </div>
 </div>
 
-<section id="about">
-  <h3>About Us</h3>
-  <p>Kshitij Tourism Pvt. Ltd. is a travel and tour company dedicated to crafting memorable journeys. From family vacations to pilgrimage tours and corporate travel, we handle every detail so you can focus on the experience.</p>
+<header class="site-header">
+  <a class="brand" href="#home">
+    <img src="assets/logo.jpg" alt="Kshitij Tourism Private Limited">
+  </a>
+
+  <nav class="main-nav" id="main-nav">
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#destinations">Tour Packages</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+
+  <div class="header-actions">
+    <a class="btn btn-whatsapp" target="_blank" rel="noopener"
+       href="https://wa.me/919711853825?text=Hi%20Kshitij%20Tourism%2C%20I%27d%20like%20to%20enquire%20about%20a%20trip.">
+      WhatsApp Enquiry
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <p class="hero-kicker">Your Dreams, Our Journey</p>
+    <h1>Explore The World With <span>Kshitij Tourism</span></h1>
+    <p class="hero-sub">International &amp; domestic travel solutions under one roof — flights, visas, passports, hotels and tour packages.</p>
+    <a class="btn btn-accent" href="#enquire">Plan Your Next Trip →</a>
+
+    <ul class="hero-chips">
+      <li>✈️ Flight Booking</li>
+      <li>🛂 Visa Assistance</li>
+      <li>📘 Passport Assistance</li>
+      <li>🏨 Hotel Booking</li>
+      <li>🗺️ Tour Packages</li>
+    </ul>
+  </div>
 </section>
 
-<section id="services">
-  <h3>Our Packages</h3>
-  <div class="cards">
-    <div class="card">
-      <h4>Pilgrimage Tours</h4>
-      <p>Guided trips to major religious and spiritual destinations with comfortable travel and stay arrangements.</p>
+<section class="enquire" id="enquire">
+  <div class="enquire-card">
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-tab="Flight" type="button">✈️ Flight Booking</button>
+      <button class="tab" data-tab="Hotel" type="button">🏨 Hotel Booking</button>
+      <button class="tab" data-tab="Tour" type="button">🗺️ Tour Package</button>
     </div>
-    <div class="card">
-      <h4>Holiday Packages</h4>
-      <p>Customized domestic and international holiday packages for families, couples, and groups.</p>
-    </div>
-    <div class="card">
-      <h4>Corporate Travel</h4>
-      <p>Reliable travel booking and management for business trips, conferences, and team outings.</p>
-    </div>
-    <div class="card">
-      <h4>Adventure Trips</h4>
-      <p>Trekking, hill station getaways, and adventure tours for the thrill-seekers.</p>
+
+    <form class="enquire-form" id="enquire-form">
+      <input type="hidden" id="enquire-type" value="Flight">
+      <div class="field">
+        <label for="eq-from">From</label>
+        <input id="eq-from" type="text" placeholder="City or Airport">
+      </div>
+      <div class="field">
+        <label for="eq-to">To / Destination</label>
+        <input id="eq-to" type="text" placeholder="City or Airport" required>
+      </div>
+      <div class="field">
+        <label for="eq-date">Travel Date</label>
+        <input id="eq-date" type="date">
+      </div>
+      <div class="field">
+        <label for="eq-phone">Your Phone</label>
+        <input id="eq-phone" type="tel" placeholder="10-digit mobile number" required>
+      </div>
+      <button class="btn btn-accent enquire-submit" type="submit">Send Enquiry</button>
+    </form>
+    <p class="form-note">We reply over WhatsApp within minutes.</p>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <h2>Complete Travel Solutions</h2>
+  <p class="section-sub">We make your travel simple, safe and memorable.</p>
+  <div class="grid grid-4">
+    <div class="icon-card"><span>✈️</span><h3>Domestic &amp; International Flights</h3><p>Best fares, multiple airlines, flexible options.</p></div>
+    <div class="icon-card"><span>🛂</span><h3>Visa Assistance</h3><p>Expert guidance for all countries.</p></div>
+    <div class="icon-card"><span>📘</span><h3>Passport Assistance</h3><p>New, renewal and reissue — hassle-free.</p></div>
+    <div class="icon-card"><span>🏨</span><h3>Hotel Booking</h3><p>Budget to luxury, worldwide.</p></div>
+    <div class="icon-card"><span>🗺️</span><h3>Tour Packages</h3><p>Customised trips for perfect experiences.</p></div>
+    <div class="icon-card"><span>🚢</span><h3>Cruise Booking</h3><p>Luxury cruises across the globe.</p></div>
+    <div class="icon-card"><span>🛡️</span><h3>Travel Insurance</h3><p>Travel with confidence.</p></div>
+    <div class="icon-card"><span>👥</span><h3>Group &amp; Corporate Travel</h3><p>Reliable booking for teams and events.</p></div>
+  </div>
+</section>
+
+<section class="destinations" id="destinations">
+  <h2>Popular Destinations</h2>
+  <p class="section-sub">Discover amazing places around the world with our exclusive tour packages.</p>
+  <div class="grid grid-dest" id="destination-grid">
+    <!-- cards injected by script.js -->
+  </div>
+</section>
+
+<section class="why" id="about">
+  <div class="why-inner">
+    <div class="why-text">
+      <h2>Why Choose <span>Kshitij Tourism?</span></h2>
+      <p class="why-tagline">Your Trust, Our Priority</p>
+      <p>At Kshitij Tourism Private Limited, we believe that travel is not just a destination, it's an experience. We are committed to providing reliable, affordable and hassle-free travel services to our valued customers.</p>
+      <div class="grid grid-3 why-points">
+        <div>🏆 Trusted &amp; Registered Company</div>
+        <div>🧑‍💼 Expert Travel Consultants</div>
+        <div>💰 Best Competitive Prices</div>
+        <div>☎️ 24/7 Customer Support</div>
+        <div>🔒 Secure &amp; Hassle-Free Booking</div>
+        <div>🎯 Personalized Travel Solutions</div>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="contact">
-  <h3>Contact Us</h3>
-  <p>Email: info@kshitijtourism.com</p>
-  <p>Phone: +91-XXXXXXXXXX</p>
-  <p>Address: Your City, India</p>
+<section class="testimonials">
+  <h2>What Our Clients Say</h2>
+  <p class="section-sub">Real stories. Real experiences.</p>
+  <div class="grid grid-3">
+    <blockquote>"Kshitij Tourism made my international trip so easy. Their visa assistance and support were excellent."<cite>— Rohit Sharma, New Delhi</cite></blockquote>
+    <blockquote>"Best travel agency in Delhi! Hotel booking and tour packages were very well planned. Highly recommended!"<cite>— Priya Singh, Gurgaon</cite></blockquote>
+    <blockquote>"Very professional and helpful team. I booked my Dubai trip and everything was perfect."<cite>— Amit Kumar, Noida</cite></blockquote>
+  </div>
 </section>
 
-<footer>
-  &copy; 2026 Kshitij Tourism Pvt. Ltd. All rights reserved.
+<section class="newsletter">
+  <div class="newsletter-inner">
+    <div>
+      <h2>Get Travel Deals In Your Inbox</h2>
+      <p>Subscribe for the latest offers and tour packages.</p>
+    </div>
+    <form id="newsletter-form">
+      <input type="email" id="newsletter-email" placeholder="Enter your email address" required>
+      <button class="btn btn-accent" type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Contact Us</h2>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <p>📍 A46 UGF, Priyadarshani Vihar, New Delhi 110092</p>
+      <p>📞 <a href="tel:+919711853825">+91 9711853825</a></p>
+      <p>✉️ <a href="mailto:info@kshitijtourism.com">info@kshitijtourism.com</a></p>
+      <p>🪪 CIN No.: U63000DL2013PTC259537</p>
+    </div>
+    <form class="contact-form" id="contact-form">
+      <input type="text" id="c-name" placeholder="Your Name" required>
+      <input type="tel" id="c-phone" placeholder="Your Phone" required>
+      <textarea id="c-message" rows="4" placeholder="How can we help?" required></textarea>
+      <button class="btn btn-accent" type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <img class="footer-logo" src="assets/logo.jpg" alt="Kshitij Tourism Private Limited">
+      <p>Travel Beyond Boundaries.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>A46 UGF, Priyadarshani Vihar, New Delhi 110092</p>
+      <p>+91 9711853825</p>
+      <p>info@kshitijtourism.com</p>
+      <p>CIN No.: U63000DL2013PTC259537</p>
+    </div>
+  </div>
+  <p class="footer-bottom">© 2026 Kshitij Tourism Private Limited. All Rights Reserved.</p>
 </footer>
 
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
 </body>
 </html>
