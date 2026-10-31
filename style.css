@@ -125,6 +125,7 @@ blockquote cite{display:block;margin-top:1rem;font-style:normal;font-weight:700;
 .footer-logo{height:50px;background:#fff;border-radius:6px;padding:4px;margin-bottom:.6rem;}
 .site-footer h4{color:#fff;}
 .site-footer a{display:block;color:#c7d2e6;text-decoration:none;margin-bottom:.4rem;font-size:.9rem;}
+.site-footer p a{display:inline;margin-bottom:0;}
 .footer-bottom{text-align:center;margin:2rem 0 0;font-size:.8rem;color:#8ea1c4;}
 
 /* toast (optimistic UI feedback) */
