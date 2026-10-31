@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "919711853825";
+const WHATSAPP_NUMBER = "917303511346";
 
 const DESTINATIONS = [
   { name: "U.S.A", tag: "Cities • Landmarks • Adventure", img: "usa.jpg" },
