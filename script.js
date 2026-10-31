@@ -1,24 +1,24 @@
 const WHATSAPP_NUMBER = "919711853825";
 
 const DESTINATIONS = [
-  { name: "U.S.A", tag: "Cities • Landmarks • Adventure", color1: "#1f3c88", color2: "#6a8dff" },
-  { name: "Canada", tag: "Nature • Cities • Adventure", color1: "#9e1b1b", color2: "#f26b6b" },
-  { name: "Europe", tag: "History • Art • Romance", color1: "#4a1f6d", color2: "#a369d6" },
-  { name: "Singapore", tag: "Modern City • Gardens • Culture", color1: "#0d6e5c", color2: "#4fd1b5" },
-  { name: "Malaysia", tag: "Cities • Rainforests • Culture", color1: "#174a2e", color2: "#4fbf7a" },
-  { name: "Indonesia", tag: "Beaches • Temples • Adventure", color1: "#7a3b12", color2: "#e3a857" },
-  { name: "Dubai", tag: "Skyline • Shopping • Desert Safari", color1: "#2d2d2d", color2: "#d4af37" },
-  { name: "Thailand", tag: "Beaches • Culture • Food", color1: "#0e7a7a", color2: "#4fd1c5" },
-  { name: "Vietnam", tag: "Culture • Landscapes • Food", color1: "#8a1c1c", color2: "#f2c230" },
-  { name: "Maldives", tag: "Island • Luxury • Relaxation", color1: "#0a4f8a", color2: "#5fc3e8" },
-  { name: "South Africa", tag: "Safari • Coast • Adventure", color1: "#3b5e1f", color2: "#e37a2c" },
+  { name: "U.S.A", tag: "Cities • Landmarks • Adventure", img: "usa.jpg" },
+  { name: "Canada", tag: "Nature • Cities • Adventure", img: "canada.jpg" },
+  { name: "Europe", tag: "History • Art • Romance", img: "europe.jpg" },
+  { name: "Singapore", tag: "Modern City • Gardens • Culture", img: "singapore.jpg" },
+  { name: "Malaysia", tag: "Cities • Rainforests • Culture", img: "malaysia.jpg" },
+  { name: "Indonesia", tag: "Beaches • Temples • Adventure", img: "indonesia.jpg" },
+  { name: "Dubai", tag: "Skyline • Shopping • Desert Safari", img: "dubai.jpg" },
+  { name: "Thailand", tag: "Beaches • Culture • Food", img: "thailand.jpg" },
+  { name: "Vietnam", tag: "Culture • Landscapes • Food", img: "vietnam.jpg" },
+  { name: "Maldives", tag: "Island • Luxury • Relaxation", img: "maldives.jpg" },
+  { name: "South Africa", tag: "Safari • Coast • Adventure", img: "south-africa.jpg" },
 ];
 
 const DOMESTIC_DESTINATIONS = [
-  { name: "Goa", tag: "Beaches • Culture • Fun", color1: "#b3261e", color2: "#f2a900" },
-  { name: "Andaman", tag: "Islands • Beaches • Water Sports", color1: "#0a6e8a", color2: "#5fd0d6" },
-  { name: "Jammu & Kashmir", tag: "Mountains • Lakes • Valleys", color1: "#1f3c6e", color2: "#8fb8e8" },
-  { name: "Uttarakhand Chardham", tag: "Pilgrimage • Himalayas • Peace", color1: "#5a3a1f", color2: "#c99a4f" },
+  { name: "Goa", tag: "Beaches • Culture • Fun", img: "goa.jpg" },
+  { name: "Andaman", tag: "Islands • Beaches • Water Sports", img: "andaman.jpg" },
+  { name: "Jammu & Kashmir", tag: "Mountains • Lakes • Valleys", img: "jammu-kashmir.jpg" },
+  { name: "Uttarakhand Chardham", tag: "Pilgrimage • Himalayas • Peace", img: "uttarakhand-chardham.jpg" },
 ];
 
 const COUNTRY_CODES = [
@@ -178,7 +178,7 @@ function renderDestinationGrid(gridId, destinations) {
   grid.innerHTML = destinations.map(
     (d) => `
     <div class="dest-card">
-      <div class="dest-img" style="background:linear-gradient(135deg, ${d.color1}, ${d.color2})">${d.name}</div>
+      <div class="dest-img"><img src="assets/destinations/${d.img}" alt="${d.name}" loading="lazy"></div>
       <div class="dest-body">
         <h3>${d.name}</h3>
         <p>${d.tag}</p>

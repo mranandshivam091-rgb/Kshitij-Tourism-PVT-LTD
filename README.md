@@ -7,6 +7,7 @@ Company website — plain HTML/CSS/vanilla JS, no framework, no build step. Chos
 - `style.css` — all styling
 - `script.js` — nav toggle, enquiry tabs, destination cards, and the optimistic-UI form handlers
 - `assets/logo.jpg` — company logo
+- `assets/destinations/` — destination card photos (one iconic landmark per destination)
 
 ## Optimistic UI
 Enquiry widget, destination "Enquire Now", newsletter signup, and the contact form all update their button to the success state immediately, then perform the real action (open WhatsApp / save locally) in the background — rolling back to an error state only if that action actually fails (e.g. pop-up blocked). See `optimisticSubmit()` in `script.js`.
@@ -16,5 +17,5 @@ Enquiry widget, destination "Enquire Now", newsletter signup, and the contact fo
 - Destinations: edit the `DESTINATIONS` array at the top of `script.js`.
 - WhatsApp number: `WHATSAPP_NUMBER` constant in `script.js`.
 
-## Known placeholders
-Destination images are CSS gradients, not real photos — swap in licensed photography when available (see `.dest-img` in `style.css`).
+## Destination photos
+Sourced from Wikimedia Commons (one recognizable landmark per destination, e.g. Burj Khalifa for Dubai, Kedarnath Temple for Uttarakhand Chardham). Swap in the company's own licensed photography when available — just replace the file under `assets/destinations/` with the same name.
