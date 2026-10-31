@@ -119,6 +119,10 @@ blockquote cite{display:block;margin-top:1rem;font-style:normal;font-weight:700;
 .contact-info a{text-decoration:none;}
 .contact-form{display:flex;flex-direction:column;gap:.8rem;}
 
+/* affiliations */
+.affiliations-logos{display:flex;justify-content:center;align-items:center;gap:3rem;flex-wrap:wrap;margin-top:1.5rem;}
+.affiliations-logos img{height:90px;width:auto;}
+
 /* footer */
 .site-footer{background:var(--navy-dark);color:#c7d2e6;padding:3rem 1.5rem 1rem;}
 .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
