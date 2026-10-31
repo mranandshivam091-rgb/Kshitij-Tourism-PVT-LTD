@@ -82,7 +82,10 @@
       </div>
       <div class="field">
         <label for="eq-phone">Your Phone</label>
-        <input id="eq-phone" type="tel" placeholder="10-digit mobile number" required>
+        <div class="phone-field">
+          <select id="eq-phone-cc" class="phone-cc" aria-label="Country code"></select>
+          <input id="eq-phone" type="tel" placeholder="Mobile number" required>
+        </div>
       </div>
       <button class="btn btn-accent enquire-submit" type="submit">Send Enquiry</button>
     </form>
@@ -174,7 +177,10 @@
     </div>
     <form class="contact-form" id="contact-form">
       <input type="text" id="c-name" placeholder="Your Name" required>
-      <input type="tel" id="c-phone" placeholder="Your Phone" required>
+      <div class="phone-field">
+        <select id="c-phone-cc" class="phone-cc" aria-label="Country code"></select>
+        <input type="tel" id="c-phone" placeholder="Your Phone" required>
+      </div>
       <textarea id="c-message" rows="4" placeholder="How can we help?" required></textarea>
       <button class="btn btn-accent" type="submit">Send Message</button>
     </form>

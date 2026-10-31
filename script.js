@@ -21,6 +21,60 @@ const DOMESTIC_DESTINATIONS = [
   { name: "Uttarakhand Chardham", tag: "Pilgrimage • Himalayas • Peace", color1: "#5a3a1f", color2: "#c99a4f" },
 ];
 
+const COUNTRY_CODES = [
+  { name: "India", dial: "+91", flag: "🇮🇳" },
+  { name: "U.S.A / Canada", dial: "+1", flag: "🇺🇸" },
+  { name: "United Kingdom", dial: "+44", flag: "🇬🇧" },
+  { name: "UAE (Dubai)", dial: "+971", flag: "🇦🇪" },
+  { name: "Saudi Arabia", dial: "+966", flag: "🇸🇦" },
+  { name: "Qatar", dial: "+974", flag: "🇶🇦" },
+  { name: "Kuwait", dial: "+965", flag: "🇰🇼" },
+  { name: "Oman", dial: "+968", flag: "🇴🇲" },
+  { name: "Bahrain", dial: "+973", flag: "🇧🇭" },
+  { name: "Singapore", dial: "+65", flag: "🇸🇬" },
+  { name: "Malaysia", dial: "+60", flag: "🇲🇾" },
+  { name: "Indonesia", dial: "+62", flag: "🇮🇩" },
+  { name: "Thailand", dial: "+66", flag: "🇹🇭" },
+  { name: "Vietnam", dial: "+84", flag: "🇻🇳" },
+  { name: "Maldives", dial: "+960", flag: "🇲🇻" },
+  { name: "South Africa", dial: "+27", flag: "🇿🇦" },
+  { name: "Australia", dial: "+61", flag: "🇦🇺" },
+  { name: "New Zealand", dial: "+64", flag: "🇳🇿" },
+  { name: "Germany", dial: "+49", flag: "🇩🇪" },
+  { name: "France", dial: "+33", flag: "🇫🇷" },
+  { name: "Italy", dial: "+39", flag: "🇮🇹" },
+  { name: "Spain", dial: "+34", flag: "🇪🇸" },
+  { name: "Netherlands", dial: "+31", flag: "🇳🇱" },
+  { name: "Switzerland", dial: "+41", flag: "🇨🇭" },
+  { name: "Russia", dial: "+7", flag: "🇷🇺" },
+  { name: "China", dial: "+86", flag: "🇨🇳" },
+  { name: "Japan", dial: "+81", flag: "🇯🇵" },
+  { name: "South Korea", dial: "+82", flag: "🇰🇷" },
+  { name: "Hong Kong", dial: "+852", flag: "🇭🇰" },
+  { name: "Philippines", dial: "+63", flag: "🇵🇭" },
+  { name: "Nepal", dial: "+977", flag: "🇳🇵" },
+  { name: "Bangladesh", dial: "+880", flag: "🇧🇩" },
+  { name: "Sri Lanka", dial: "+94", flag: "🇱🇰" },
+  { name: "Brazil", dial: "+55", flag: "🇧🇷" },
+  { name: "Mexico", dial: "+52", flag: "🇲🇽" },
+  { name: "Turkey", dial: "+90", flag: "🇹🇷" },
+  { name: "Egypt", dial: "+20", flag: "🇪🇬" },
+  { name: "Kenya", dial: "+254", flag: "🇰🇪" },
+  { name: "Nigeria", dial: "+234", flag: "🇳🇬" },
+];
+
+function populateCountryCode(selectId, defaultDial) {
+  const select = document.getElementById(selectId);
+  if (!select) return;
+  select.innerHTML = COUNTRY_CODES.map(
+    (c) => `<option value="${c.dial}">${c.flag} ${c.dial}</option>`
+  ).join("");
+  select.value = defaultDial;
+}
+
+populateCountryCode("eq-phone-cc", "+91");
+populateCountryCode("c-phone-cc", "+91");
+
 function toast(message, isError) {
   const el = document.getElementById("toast");
   el.textContent = message;
@@ -101,6 +155,7 @@ document.getElementById("enquire-form").addEventListener("submit", (e) => {
   const from = document.getElementById("eq-from").value.trim();
   const to = document.getElementById("eq-to").value.trim();
   const date = document.getElementById("eq-date").value;
+  const phoneCc = document.getElementById("eq-phone-cc").value;
   const phone = document.getElementById("eq-phone").value.trim();
 
   const message =
@@ -108,7 +163,7 @@ document.getElementById("enquire-form").addEventListener("submit", (e) => {
     (from ? `From: ${from}\n` : "") +
     `To/Destination: ${to}\n` +
     (date ? `Date: ${date}\n` : "") +
-    `Phone: ${phone}`;
+    `Phone: ${phoneCc} ${phone}`;
 
   optimisticSubmit(e.target.querySelector(".enquire-submit"), {
     successText: "Sent ✓",
@@ -170,10 +225,11 @@ document.getElementById("newsletter-form").addEventListener("submit", (e) => {
 document.getElementById("contact-form").addEventListener("submit", (e) => {
   e.preventDefault();
   const name = document.getElementById("c-name").value.trim();
+  const phoneCc = document.getElementById("c-phone-cc").value;
   const phone = document.getElementById("c-phone").value.trim();
   const msg = document.getElementById("c-message").value.trim();
 
-  const message = `New contact form message from kshitijtourism.com\nName: ${name}\nPhone: ${phone}\nMessage: ${msg}`;
+  const message = `New contact form message from kshitijtourism.com\nName: ${name}\nPhone: ${phoneCc} ${phone}\nMessage: ${msg}`;
 
   optimisticSubmit(e.target.querySelector("button"), {
     successText: "Message Sent ✓",

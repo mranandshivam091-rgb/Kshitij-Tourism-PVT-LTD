@@ -71,6 +71,9 @@ section h2{font-size:1.8rem;text-align:center;}
 .field{display:flex;flex-direction:column;gap:.3rem;}
 .field label{font-size:.8rem;color:var(--muted);font-weight:600;}
 .field input,.contact-form input,.contact-form textarea,.newsletter input{border:1px solid #d7deea;border-radius:6px;padding:.65rem .8rem;font-size:.95rem;font-family:inherit;}
+.phone-field{display:flex;gap:.5rem;}
+.phone-field input{flex:1;min-width:0;}
+.phone-cc{flex:0 0 auto;width:5.5rem;border:1px solid #d7deea;border-radius:6px;padding:.65rem .4rem;font-size:.95rem;font-family:inherit;background:#fff;}
 .enquire-submit{grid-column:1/-1;justify-self:start;}
 .form-note{color:var(--muted);font-size:.85rem;margin:.8rem 0 0;}
 
